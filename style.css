@@ -156,6 +156,15 @@ header {
 .sec-02 {
   padding: 1rem 0 4rem 0;
   margin-top: 10rem;
+  background: linear-gradient(
+    to bottom,
+    #fffaf5,
+    #fff5e9,
+    #fff6ec,
+    #fff8f1,
+    #fffaf5,
+    #ffffff
+  );
 }
 
 .sec-02__grid-box {
@@ -191,7 +200,7 @@ header {
     to bottom,
     #ffffff,
     #fff8f0,
-    #fff0dd,
+    #fff3e3,
     #fff8f0,
     #ffffff
   );
