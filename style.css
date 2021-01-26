@@ -35,24 +35,22 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   padding-left: 1rem;
-  color: rgb(47, 47, 47);
+  color: rgb(223, 223, 223);
 }
 
 /* nav links */
-.nav__link {
-}
 
 .nav__link:hover > .link__list {
   display: block;
 }
 
 .nav__link:hover > .link__button {
-  background-color: rgba(47, 47, 47, 0.198);
+  background-color: rgba(47, 47, 47, 0.308);
 }
 
 .link__button {
   background-color: rgba(47, 47, 47, 0);
-  color: rgb(47, 47, 47);
+  color: rgb(223, 223, 223);
   border: none;
   padding: 1.1rem;
   text-transform: uppercase;
@@ -67,11 +65,11 @@ body {
   display: none;
   position: absolute;
   right: 0;
-  background-color: rgba(44, 44, 44, 0.144);
+  background-color: rgba(44, 44, 44, 0.308);
 }
 
 .link__list a {
-  color: rgb(209, 209, 209);
+  color: rgb(230, 230, 230);
   padding: 0.53rem 3rem;
   text-decoration: none;
   display: block;
@@ -80,7 +78,7 @@ body {
 }
 
 .link__list a:hover {
-  background-color: rgba(47, 47, 47, 0.322);
+  background-color: rgba(47, 47, 47, 0.698);
 }
 
 /* EXPERIMENT */
@@ -120,6 +118,15 @@ header {
   background: url(./images/farm/kulli-kittus-R0g6wtDN1M8-unsplash.jpg);
   height: 100vh;
   background-size: cover;
+}
+
+.hero-title {
+  font-family: "Lobster", cursive;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 6rem;
+  color: #ffd49d6e;
+  padding-top: 3rem;
 }
 
 /* general  rules */
