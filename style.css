@@ -1,27 +1,101 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 /* Ratko */
 
-
-
-
 /* Arty */
-
-
-
-
 
 /* Gary */
 
+/*  fLEXBOX  */
 
+Body {
+  background-color: #f9ebe3;
+}
+h2 {
+  text-align: center;
+  padding: 35px;
+}
 
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 145px;
+}
 
+.flex-container {
+  background-color: #f4dcce;
+}
 
+img {
+  width: 325px;
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+}
 
+/* FORM */
 
+* {
+  box-sizing: border-box;
+}
 
+H3 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
 
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  width: 55%;
+  background-color: #e5ae8c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #9f9691;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #fdf9f6;
+  padding: 15px;
+  margin-bottom: 55px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  position: ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e5ae8c;
+  color: #7f8b93;
+  text-align: center;
+  height: 35px;
+}
