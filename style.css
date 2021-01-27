@@ -455,11 +455,11 @@ border-top: 3px solid darkgray;
 }
 
 .booking-offer p {
-  margin: 5rem 2rem; 
-  font-size: 1.3rem;
+  margin: 3rem 2rem; 
+  font-size: 1.1rem;
   text-align: center;
   line-height: 2rem;
-  color: #818181;
+  color: #252525;
 }
 
 .booking-offer__book-now-container {
