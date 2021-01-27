@@ -4,9 +4,22 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+ }
+
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+h2 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* Ratko */
 
 /* navigation bar */
@@ -15,7 +28,7 @@ body {
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: rgba(169, 169, 169, 0.377);
   border-bottom: rgb(47, 47, 47) solid 1px;
 }
 
@@ -32,10 +45,11 @@ body {
 
 .logo__title {
   display: block;
-  text-transform: uppercase;
-  font-weight: 700;
+  text-transform: capitalize;
+  font-weight: 600;
   padding-left: 1rem;
-  color: rgb(223, 223, 223);
+  /* color: rgb(223, 223, 223); */
+  color: black; 
 }
 
 /* nav links */
@@ -69,12 +83,14 @@ body {
 }
 
 .link__list a {
-  color: rgb(230, 230, 230);
+  /* color: rgb(230, 230, 230); */
+  color: black;
   padding: 0.53rem 3rem;
   text-decoration: none;
   display: block;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 500;
+  font-size: 0.95rem; 
 }
 
 .link__list a:hover {
@@ -115,7 +131,7 @@ body {
 
 /* header hero image */
 header {
-  background: url(./images/farm/kulli-kittus-R0g6wtDN1M8-unsplash.jpg);
+  background: url(./images/farm/willian-justen-de-vasconcellos-ulUnRNuC_ok-unsplash.jpg);
   height: 100vh;
   background-size: cover;
 }
@@ -132,14 +148,10 @@ header {
 /* general  rules */
 .sec-01__title,
 .sec-02__title {
-  text-transform: capitalize;
-  text-align: center;
   margin: 2rem auto;
 }
 
 .sec-03__title {
-  text-transform: capitalize;
-  text-align: center;
   margin-top: 4rem;
 }
 
@@ -247,22 +259,22 @@ header {
 
 * {
   /* outline: 1px solid red; */
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Guided-tours__section{
-  background-color: #dbdbdb;
+  background: rgb(65, 105, 133);
+background: linear-gradient(180deg, rgba(0,65,112,0.8631827731092436) 10%, rgba(155,202,235,0) 100%);
+border-top: 3px solid darkgray; 
 }
 
 .Guided-tours__title {
   text-align: center;
   margin: 2rem auto;
-  padding-top: 2rem;  
-  font-size: 2.5rem;
+  padding: 1rem 0;  
+  color: white; 
 }
 
 .Guided-tours {
-  background-color: #dbdbdb;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -280,17 +292,21 @@ header {
 	background: #F8F8F8; 
 	border: solid #BDBDBD 1px; 
 	box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2)  ; 
-	-webkit-box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2)  ; 
-	-moz-box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2)  ; 
+  transition: 0.5s ease;
+}
+
+.Guided-tours__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s ease;
+  transform: scale(1.08);
 }
 
 .Guided-tours__card h4 {
-  font-size: 1.2rem;
   text-align: center;
   padding-bottom: 0.7rem;
 }
 
-.Guided-tours__text-container>*+* {
+.Guided-tours__text-container > * + *{
   margin: 2rem 0;
   line-height: 1.5rem;
 }
@@ -303,20 +319,23 @@ header {
   position: relative; 
 } 
 
-.Guided-tours__most-booked {
+.Guided-tours__card--two::before {
+  content: "Most booked";
   font-weight: bold;
   font-size: 0.8rem;
-  padding: 0.3rem 0.9rem; 
+  padding: 0.3rem 0.5rem; 
   text-transform: uppercase;
   position: absolute;
-  top: 0;
-  left: 0; 
-} 
+  top: 9%;
+  left: -1%; 
+  color: white; 
+  background-color: #4e3b30;
+}
 
 .Guided-tours__book-now-container__button {
   display: block;
   text-decoration: none;
-  background-color: #E5AE8C;
+  background-color: white;
   color: #4e3b30;
   font-weight: bold;
   cursor: pointer;
@@ -326,12 +345,18 @@ header {
   line-height: 3rem;
   text-transform: uppercase;
   margin-top: 2rem;
+  border: 2px solid #E5AE8C; 
+}
+
+.Guided-tours__book-now-container__button:hover {
+  background-color: #E5AE8C;
 }
 
 @media only screen and (min-width: 1024px) {
 
   .Guided-tours {
     flex-direction: row;
+    padding: 0 3rem; 
   }
 
   .Guided-tours__card {
@@ -339,11 +364,17 @@ header {
     flex-direction: column;
     justify-content: space-between;
     width: 500px;
-    height: 725px;
+    height: 600px;
   }
 
   .Guided-tours__card--two {
     margin: 0 1.5rem; 
+  }
+
+  .Guided-tours__card--two::before {
+    padding: 0.3rem 0.9rem; 
+    top: 6%;
+    left: -1%; 
   }
 
 }
@@ -358,12 +389,10 @@ header {
   width: 90%;
 }
 
-
-
 .accommodation__title {
   text-align: center;
-  margin: 4rem auto 2rem auto;
-  font-size: 2.5rem;
+  margin: 2rem auto ;
+  padding: 1rem 0;  
 }
 
 .accommodation {
@@ -388,17 +417,19 @@ header {
 .accommodation__card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .accommodation__card h4 {
   text-align: center;
   margin: 1rem 0;  
+  color: #3b2d25;
 }
 
 .accommodation__card p {
   text-align: center;
   line-height: 1.5rem;
+  color: rgb(99, 99, 99);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -428,6 +459,7 @@ header {
   font-size: 1.3rem;
   text-align: center;
   line-height: 2rem;
+  color: #818181;
 }
 
 .booking-offer__book-now-container {
@@ -438,7 +470,7 @@ header {
 .booking-offer__book-now-button {
   display: block;
   text-decoration: none;
-  background-color: #E5AE8C;
+  background-color: white;
   color: #4e3b30;
   font-weight: bold;
   cursor: pointer;
@@ -448,7 +480,101 @@ header {
   line-height: 2.7rem;
   text-transform: uppercase;
   margin: 3rem auto; 
+  border: 2px solid #E5AE8C; 
+}
+
+.booking-offer__book-now-button:hover {
+  background-color: #E5AE8C; 
 }
 
 /* Gary */
+
+/*  FARM SHOP  */
+
+
+/* h2 {
+  text-align: center;
+  padding: 35px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 145px;
+}
+
+.flex-container {
+  background-color: #f4dcce;
+}
+
+.img {
+  width: 325px;
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+}
+
+/* FORM */
+/* 
+* {
+  box-sizing: border-box;
+}
+
+H3 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  width: 55%;
+  background-color: #e5ae8c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #9f9691;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #fdf9f6;
+  padding: 15px;
+  margin-bottom: 55px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* FOOTER */
+
+/* .footer {
+  position: ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #e5ae8c;
+  color: #7f8b93;
+  text-align: center;
+  height: 35px;
+}   */
+
 
