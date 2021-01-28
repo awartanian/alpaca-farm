@@ -53,11 +53,11 @@ h2 {
 
 /* nav links */
 
-.nav__link:hover > .link__list {
+.nav__link:hover>.link__list {
   display: block;
 }
 
-.nav__link:hover > .link__button {
+.nav__link:hover>.link__button {
   background-color: rgba(47, 47, 47, 0.308);
 }
 
@@ -111,7 +111,7 @@ h2 {
     justify-content: flex-end;
   }
 
-  .nav__link:hover > .link__list {
+  .nav__link:hover>.link__list {
     display: flex;
   }
 
@@ -130,8 +130,11 @@ h2 {
 
 /* header hero image */
 header {
-  background: url(./images/farm/willian-justen-de-vasconcellos-ulUnRNuC_ok-unsplash.jpg);
+  background: url(./images/farm/alpaca-hero-image.jpg);
   height: 100vh;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -174,18 +177,24 @@ header {
 }
 
 /* section Farm(02) grid layout */
+
+.sec-01__text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 3rem auto;
+  width: 90%;
+}
+
 .sec-02 {
   padding: 1rem 0 4rem 0;
   margin-top: 10rem;
-  background: linear-gradient(
-    to bottom,
-    #fffaf5,
-    #fff5e9,
-    #fff6ec,
-    #fff8f1,
-    #fffaf5,
-    #ffffff
-  );
+  background: linear-gradient(to bottom,
+      #fffaf5,
+      #fff5e9,
+      #fff6ec,
+      #fff8f1,
+      #fffaf5,
+      #ffffff);
 }
 
 .sec-02__grid-box {
@@ -220,14 +229,12 @@ header {
 /* section Alpacas(03) flex images */
 .sec-03 {
   margin: 5rem auto;
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #fff8f0,
-    #fff3e3,
-    #fff8f0,
-    #ffffff
-  );
+  background: linear-gradient(to bottom,
+      #ffffff,
+      #fff8f0,
+      #fff3e3,
+      #fff8f0,
+      #ffffff);
 }
 
 .sec-03__wrapper {
@@ -274,13 +281,11 @@ header {
 }
 
 .Guided-tours__section {
-  background: rgb(65, 105, 133);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 65, 112, 0.8631827731092436) 10%,
-    rgba(155, 202, 235, 0) 100%
-  );
+  background: rgb(104, 123, 136);
+  background: linear-gradient(180deg, rgba(78, 110, 133, 0.863) 10%, rgba(155, 202, 235, 0) 100%);
   border-top: 3px solid darkgray;
+  width: 100%;
+  margin: 0 auto; 
 }
 
 .Guided-tours__title {
@@ -294,41 +299,19 @@ header {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  max-width: 1500px;
 }
 
 .Guided-tours__card {
-  padding: 2.2rem;
+  padding: 1.3rem 2rem;
   background-color: #fbfbfb;
-  border-radius: 1rem;
   max-width: 500px;
   margin: 0 auto 2rem auto;
-  width: [object Object]px;
-  height: [object Object]px;
-  background: #f8f8f8;
-  border: solid #bdbdbd 1px;
-  box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background: #F8F8F8;
+  border: solid #BDBDBD 1px;
+  /* box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2); */
   transition: 0.5s ease;
-}
-
-.Guided-tours__card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: 0.5s ease;
-  transform: scale(1.08);
-}
-
-.Guided-tours__card h4 {
-  text-align: center;
-  padding-bottom: 0.7rem;
-}
-
-.Guided-tours__text-container > * + * {
-  margin: 2rem 0;
-  line-height: 1.5rem;
-}
-
-.Guided-tours__text-container ul {
-  padding-left: 1.2rem;
 }
 
 .Guided-tours__card--two {
@@ -348,24 +331,48 @@ header {
   background-color: #4e3b30;
 }
 
+
+.Guided-tours__card h4 {
+  text-align: center;
+  padding-bottom: 0.7rem;
+  color: #3b2d25;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+
+.Guided-tours__text-container>*+* {
+  margin: 2rem 0;
+  line-height: 1.5rem;
+  font-size: 15px;
+}
+
+.Guided-tours__text-container ul {
+  padding-left: 1.2rem;
+}
+
+
 .Guided-tours__book-now-container__button {
   display: block;
   text-decoration: none;
   background-color: white;
   color: #4e3b30;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 1px;
   cursor: pointer;
   width: 100%;
   text-align: center;
-  border-radius: 0.6rem;
   line-height: 3rem;
   text-transform: uppercase;
   margin-top: 2rem;
-  border: 2px solid #e5ae8c;
+  background-color: #E5AE8C;
+  border-radius: 3px;
 }
 
 .Guided-tours__book-now-container__button:hover {
-  background-color: #e5ae8c;
+  color: white;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -378,49 +385,56 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 500px;
-    height: 600px;
+    width: 430px;
+    margin: 0 1rem;
   }
 
   .Guided-tours__card--two {
-    margin: 0 1.5rem;
+    transform: scale(1.06);
   }
 
   .Guided-tours__card--two::before {
     padding: 0.3rem 0.9rem;
-    top: 6%;
+    top: 7%;
     left: -1%;
+  }
+
+  .Guided-tours__card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.5s ease;
+    transform: scale(1.08);
+    font-size: 17px;
   }
 }
 
 /* ACCOMMODATION SECTION */
 
-.sec-01__text {
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 3rem auto;
-  width: 90%;
+
+.accommodation__section {
+  background-color: #f9f9f9;
+  width: 100%;
 }
 
 .accommodation__title {
   text-align: center;
-  margin: 2rem auto;
+  margin: 3rem auto 2rem auto;
   padding: 1rem 0;
+  background-color: #f9f9f9;
 }
 
 .accommodation {
   margin: 0 auto;
-  width: 90%;
+  max-width: 1500px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .accommodation__card {
-  max-width: 500px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto 2rem auto;
+  margin-bottom: 1.5rem;
 }
 
 .accommodation__image-container {
@@ -430,32 +444,31 @@ header {
 .accommodation__card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .accommodation__card h4 {
   text-align: center;
   margin: 1rem 0;
   color: #3b2d25;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
 }
 
 .accommodation__card p {
   text-align: center;
-  line-height: 1.5rem;
-  color: rgb(99, 99, 99);
+  font-size: 16px;
+  line-height: 26px;
+  color: #818181;
 }
 
-@media only screen and (min-width: 1024px) {
-  .accommodation {
-    flex-direction: row;
-  }
 
-  .accommodation__card {
-    width: 500px;
-  }
+@media only screen and (min-width: 904px) {
 
   .accommodation__card--two {
-    margin: 0 1.5rem;
+    margin: 0 2rem;
   }
 }
 
@@ -467,11 +480,18 @@ header {
 }
 
 .booking-offer p {
-  margin: 5rem 2rem;
-  font-size: 1.3rem;
+  margin: 2.5rem 2rem;
+  font-size: 1.1rem;
   text-align: center;
   line-height: 2rem;
-  color: #818181;
+  color: #252525;
+}
+
+@media only screen and (min-width: 904px) {
+
+  .booking-offer p {
+    margin: 3rem 7rem;
+  }
 }
 
 .booking-offer__book-now-container {
@@ -484,19 +504,22 @@ header {
   text-decoration: none;
   background-color: white;
   color: #4e3b30;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 1px;
   cursor: pointer;
   width: 300px;
   text-align: center;
-  border-radius: 0.5rem;
   line-height: 2.7rem;
   text-transform: uppercase;
   margin: 3rem auto;
-  border: 2px solid #e5ae8c;
+  background-color: #E5AE8C;
+  border-radius: 3px;
 }
 
 .booking-offer__book-now-button:hover {
-  background-color: #e5ae8c;
+  color: white; 
+  font-size: 17px;
+  transition: 0.2s ease;
 }
 
 /* Gary */
@@ -610,3 +633,7 @@ input:focus,
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
+
+
+
+
