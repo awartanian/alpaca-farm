@@ -130,10 +130,10 @@ h2 {
 
 /* header hero image */
 header {
-  background: url(./images/farm/alpaca-hero-image.jpg);
+  background: url(./images/farm/alpaca-hero-image-black-white.jpg);
   height: 100vh;
   background-attachment: fixed;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -283,16 +283,21 @@ header {
 .Guided-tours__section {
   background: rgb(104, 123, 136);
   background: linear-gradient(180deg, rgba(78, 110, 133, 0.863) 10%, rgba(155, 202, 235, 0) 100%);
-  border-top: 3px solid darkgray;
   width: 100%;
   margin: 0 auto; 
+  padding-bottom: 5rem; 
+  background-image: url(./images/farm/Alpacas_black_white.jpg) ;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Guided-tours__title {
   text-align: center;
   margin: 2rem auto;
   padding: 1rem 0;
-  color: white;
+  color: black;
 }
 
 .Guided-tours {
@@ -537,7 +542,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   max-width: 1500px;
   margin: auto;
 }
