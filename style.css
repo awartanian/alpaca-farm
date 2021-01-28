@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
 }
 
 h2 {
@@ -28,7 +29,6 @@ h2 {
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0);
 }
 
 /* nav logo and title */
@@ -47,43 +47,47 @@ h2 {
   text-transform: capitalize;
   font-weight: 600;
   padding-left: 1rem;
-  /* color: rgb(223, 223, 223); */
-  color: black;
+  color: rgb(59, 59, 59);
 }
 
 /* nav links */
 
-.nav__link:hover>.link__list {
+.nav__link:hover > .link__list {
   display: block;
+  background-color: #fafafa;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 100%;
+  text-align: center;
 }
 
-.nav__link:hover>.link__button {
-  background-color: rgba(47, 47, 47, 0.308);
+.nav__link:hover > .link__button {
+  color: rgb(59, 59, 59);
 }
 
 .link__button {
   background-color: rgba(47, 47, 47, 0);
-  color: rgb(223, 223, 223);
+  color: rgb(59, 59, 59);
   border: none;
   padding: 1.1rem;
   text-transform: uppercase;
   font-weight: 600;
+  outline: none;
 }
 
 .link__button:hover {
-  color: rgb(209, 209, 208);
+  color: rgb(51, 51, 51);
 }
 
 .link__list {
   display: none;
   position: absolute;
   right: 0;
-  background-color: rgba(44, 44, 44, 0.308);
 }
 
 .link__list a {
   /* color: rgb(230, 230, 230); */
-  color: black;
+  color: rgb(59, 59, 59);
   padding: 0.53rem 3rem;
   text-decoration: none;
   display: block;
@@ -92,11 +96,9 @@ h2 {
   font-size: 0.95rem;
 }
 
-.link__list a:hover {
-  background-color: rgba(47, 47, 47, 0.698);
-}
-
 /* EXPERIMENT */
+/* 
+
 /* navigation after 900px screen width */
 @media screen and (min-width: 900px) {
   .link__button {
@@ -111,12 +113,17 @@ h2 {
     justify-content: flex-end;
   }
 
-  .nav__link:hover>.link__list {
+  .nav__link:hover > .link__list {
     display: flex;
   }
 
+  .nav__link:hover > .link__list {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
   .link__list a:hover {
-    background-color: rgba(47, 47, 47, 0.144);
+    color: #e5ae8c;
   }
 
   .nav__logo {
@@ -164,7 +171,7 @@ header {
 }
 
 .sec-03__title {
-  margin-top: 4rem;
+  margin: 2rem auto;
 }
 
 /* styling for all images in first 3 sections */
@@ -186,37 +193,30 @@ header {
 }
 
 .sec-02 {
-  padding: 1rem 0 4rem 0;
-  margin-top: 10rem;
-  background: linear-gradient(to bottom,
-      #fffaf5,
-      #fff5e9,
-      #fff6ec,
-      #fff8f1,
-      #fffaf5,
-      #ffffff);
+  padding: 1rem 0 8rem 0;
+  margin-top: 5rem;
 }
 
 .sec-02__grid-box {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(1, 1fr);
-  grid-gap: 1rem;
-  width: 90%;
+  grid-gap: 1.2rem;
   margin: auto;
+  width: 90%;
 }
 
 @media screen and (min-width: 1025px) {
   .sec-02__grid-box {
-    grid-template-columns: repeat(auto-fit, 450px);
+    grid-template-columns: repeat(auto-fit, 420px);
     grid-template-rows: repeat(auto-fit, 1fr);
     justify-content: center;
-    max-width: 1500px;
+    max-width: 1400px;
   }
 }
 
 .grid-box {
-  height: 350px;
+  height: 300px;
   transition: 0.5s ease;
 }
 
@@ -228,18 +228,12 @@ header {
 
 /* section Alpacas(03) flex images */
 .sec-03 {
-  margin: 5rem auto;
-  background: linear-gradient(to bottom,
-      #ffffff,
-      #fff8f0,
-      #fff3e3,
-      #fff8f0,
-      #ffffff);
+  margin: 2rem auto;
 }
 
 .sec-03__wrapper {
   width: 90%;
-  max-width: 1500px;
+  max-width: 1400px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -281,25 +275,23 @@ header {
 }
 
 .Guided-tours__section {
-  background: rgb(104, 123, 136);
-  background: linear-gradient(180deg, rgba(78, 110, 133, 0.863) 10%, rgba(155, 202, 235, 0) 100%);
-  border-top: 3px solid darkgray;
   width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .Guided-tours__title {
   text-align: center;
   margin: 2rem auto;
   padding: 1rem 0;
-  color: white;
+  color: rgb(36, 36, 36);
 }
 
 .Guided-tours {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
+  max-width: 1400px;
+  width: 90%;
 }
 
 .Guided-tours__card {
@@ -308,8 +300,8 @@ header {
   max-width: 500px;
   margin: 0 auto 2rem auto;
   border-radius: 3px;
-  background: #F8F8F8;
-  border: solid #BDBDBD 1px;
+  background: #f8f8f8;
+  border: solid #bdbdbd 1px;
   /* box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2); */
   transition: 0.5s ease;
 }
@@ -331,19 +323,17 @@ header {
   background-color: #4e3b30;
 }
 
-
 .Guided-tours__card h4 {
   text-align: center;
   padding-bottom: 0.7rem;
   color: #3b2d25;
   text-transform: uppercase;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 22px;
   font-weight: 400;
 }
 
-
-.Guided-tours__text-container>*+* {
+.Guided-tours__text-container > * + * {
   margin: 2rem 0;
   line-height: 1.5rem;
   font-size: 15px;
@@ -352,7 +342,6 @@ header {
 .Guided-tours__text-container ul {
   padding-left: 1.2rem;
 }
-
 
 .Guided-tours__book-now-container__button {
   display: block;
@@ -367,7 +356,7 @@ header {
   line-height: 3rem;
   text-transform: uppercase;
   margin-top: 2rem;
-  background-color: #E5AE8C;
+  background-color: #e5ae8c;
   border-radius: 3px;
 }
 
@@ -409,7 +398,6 @@ header {
 
 /* ACCOMMODATION SECTION */
 
-
 .accommodation__section {
   background-color: #f9f9f9;
   width: 100%;
@@ -417,7 +405,7 @@ header {
 
 .accommodation__title {
   text-align: center;
-  margin: 3rem auto 2rem auto;
+  margin: 5rem auto 2rem auto;
   padding: 1rem 0;
   background-color: #f9f9f9;
 }
@@ -452,7 +440,7 @@ header {
   margin: 1rem 0;
   color: #3b2d25;
   text-transform: uppercase;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 22px;
   font-weight: 400;
 }
@@ -464,9 +452,7 @@ header {
   color: #818181;
 }
 
-
 @media only screen and (min-width: 904px) {
-
   .accommodation__card--two {
     margin: 0 2rem;
   }
@@ -488,7 +474,6 @@ header {
 }
 
 @media only screen and (min-width: 904px) {
-
   .booking-offer p {
     margin: 3rem 7rem;
   }
@@ -512,12 +497,12 @@ header {
   line-height: 2.7rem;
   text-transform: uppercase;
   margin: 3rem auto;
-  background-color: #E5AE8C;
+  background-color: #e5ae8c;
   border-radius: 3px;
 }
 
 .booking-offer__book-now-button:hover {
-  color: white; 
+  color: white;
   font-size: 17px;
   transition: 0.2s ease;
 }
@@ -537,20 +522,22 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   max-width: 1500px;
+  width: 90%;
   margin: auto;
 }
 
 .wrapper__card {
   width: 400px;
-  margin: auto 0.6rem;
+  margin: 0.7rem;
   border-radius: 3px;
   overflow: hidden;
 }
 
 .card__image {
   width: 100%;
+  height: 250px;
 }
 
 .card__body {
@@ -561,7 +548,10 @@ header {
 .body__title {
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .body__text {
@@ -572,10 +562,20 @@ header {
 
 /* Form */
 
-.form {
+.form__shadow {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   width: 90%;
   max-width: 800px;
   margin: 3rem auto;
+  height: 100%;
+  padding: 0.1rem;
+  background-color: #9c9c9c10;
+}
+
+.form {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
 }
 
 input,
@@ -585,16 +585,13 @@ textarea {
   display: block;
   width: 100%;
   margin-top: 0.8rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   resize: none;
   color: rgb(0, 0, 0);
   border: none;
   outline: none;
   font-family: "montserrat", sans-serif;
-}
-
-input[type="placeholder"] {
-  color: #d100003d;
 }
 
 .textarea {
@@ -607,33 +604,37 @@ input[type="submit"] {
   width: 60%;
   max-width: 300px;
   height: 40px;
-  margin: 1rem auto;
+  margin: 2rem auto;
   font-weight: 500;
   font-size: 0.9rem;
   line-height: 8px;
-  color: #3d3d3d;
+  color: #3d3d3dca;
   font-weight: 600;
+  display: block;
 }
 
 input[type="submit"]:active {
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-  background-color: rgba(255, 255, 255, 0);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px inset,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px inset;
 }
 
 input[type="submit"]:hover {
   color: rgb(0, 0, 0);
   transition: 0.5s ease;
-  background-color: white;
-  line-height: 5px;
+  color: white;
 }
 
 input:focus,
 .textarea:focus {
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px inset,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px inset;
 }
 
-
-
-
+.form__label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #3d3d3de8;
+  margin: 0.9rem 0 -0.5rem 0.3rem;
+  display: block;
+  text-transform: capitalize;
+}

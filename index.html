@@ -321,17 +321,31 @@
     </section>
     <section>
       <h2>contact us</h2>
+      <div class="form__shadow">
       <form class="form" action="index.html" method="POST">
-        <input type="text" name="first name" placeholder="First Name" />
-        <input type="text" name="last name" placeholder="Last Name" />
-        <input type="email" name="email" placeholder="Email" />
-        <textarea
+        <div>
+          <label class="form__label" for="firstName">first name:</label>
+          <input type="text" id="firstName" name="firstName" placeholder="..." />
+        </div>
+        <div>
+          <label class="form__label" for="lastName">last name:</label>
+          <input type="text" name="last name" placeholder="..."  />
+        </div>
+        <div>
+          <label class="form__label" for="email">email:</label>
+          <input type="email" name="email" placeholder="..."  />
+        </div>
+        <div>
+          <label class="form__label" for="textarea">comment:</label>
+          <textarea
           class="textarea"
+          id="textarea"
           name="message"
-          placeholder="Your message for us"
-        ></textarea>
+          ></textarea>
+        </div>
         <input type="submit" value="Submit" />
       </form>
+    </div>
     </section>
   </body>
 </html>
