@@ -20,119 +20,122 @@ h2 {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  margin: 3rem auto; 
+  margin: 3rem auto;
 }
 
 /* Ratko */
 
 /* navigation bar */
 .nav {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
+  position: relative;
+  max-width: 1400px;
+  margin: auto;
 }
 
 /* nav logo and title */
 .nav__logo {
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
+  width: 200px;
+  padding: 1.02rem;
+  background-color: #fafafacb;
 }
 
 .logo__img {
-  width: 36px;
+  width: 50px;
+  float: left;
 }
 
-.logo__title {
+.logo__title1 {
   display: block;
-  text-transform: capitalize;
-  font-weight: 600;
-  padding-left: 1rem;
-  color: rgb(59, 59, 59);
+  text-transform: uppercase;
+  font-size: 1.16rem;
+  font-family: "Montserrat";
 }
 
-/* nav links */
-
-.link__list a {
-  color: rgb(59, 59, 59);
-  padding: 0.53rem 3rem;
-  text-decoration: none;
+.logo__title2 {
   display: block;
-  text-transform: capitalize;
+  margin-top: -0.5rem;
+  text-transform: uppercase;
+  font-size: 1.95rem;
+  color: #e5ae8c;
+  font-family: "Playfair Display";
   font-weight: 500;
-  font-size: 0.95rem;
 }
 
-.link__list {
-  display: none;
+/* navigation links */
+.nav__menu {
+  height: 90px;
+  line-height: 70px;
+  max-width: 100%;
+  min-width: 200px;
+  text-align: right;
   position: absolute;
-  right: 0;
+  top: 0;
+  width: 100%;
 }
 
-.link__list a:hover {
+.menu__list {
+  text-align: center;
+  background-color: #fafafacb;
+  display: none;
+}
+
+.menu__list a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  line-height: 50px;
+  font-weight: 400;
+  text-transform: capitalize;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+  text-align: left;
+  padding-left: 4.3rem;
+  font-size: 1.1rem;
+}
+
+.menu__list a:hover {
   color: #e5ae8c;
 }
 
-.nav__link:hover > .link__list {
+label[for="menu__toggle"] {
+  margin-right: 2rem;
+  font-size: 1.7rem;
+  line-height: 90px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#menu__toggle:checked + .menu__list {
   display: block;
-  background-color: #fafafa;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  width: 100%;
-  text-align: center;
 }
 
-.nav__link:hover > .link__button {
-  color: rgb(59, 59, 59);
+.ham-line {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
 }
 
-.link__button {
-  background-color: rgba(47, 47, 47, 0);
-  color: rgb(59, 59, 59);
-  border: none;
-  padding: 1.1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  outline: none;
-}
-
-.link__button:hover {
-  color: rgb(51, 51, 51);
-}
-
-/* EXPERIMENT */
-/* 
-/* navigation after 900px screen width */
-@media screen and (min-width: 900px) {
-  .link__button {
+@media screen and (min-width: 1025px) {
+  label[for="menu__toggle"] {
     display: none;
   }
 
-  .link__list {
-    display: flex;
+  .menu__list {
+    display: inline-block;
     background-color: transparent;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    text-align: right;
   }
 
-  .link__list a {
-    padding: 1rem 1rem;
-  }
-
-  .link__list a:hover {
-    color: #e5ae8c;
-  }
-
-  .nav__link:hover > .link__list {
-    display: flex;
-    box-shadow: none;
-    background-color: transparent;
-  }
-
-  .nav__logo {
-    padding: 0.45rem;
+  .menu__list a {
+    display: inline-block;
+    padding: 0 1.5rem;
+    line-height: 90px;
+    border: none;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
   }
 }
 
@@ -186,16 +189,23 @@ header {
 
 /* section Farm(02) grid layout */
 
+.sec-01 {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .sec-01__text {
+  margin: 1.8rem 2rem;
+  font-size: 1.1rem;
   text-align: center;
-  font-size: 1.2rem;
-  margin: 3rem auto;
-  width: 90%;
+  line-height: 2rem;
+  color: #252525;
 }
 
 .sec-02 {
   padding: 1rem 0 8rem 0;
   margin-top: 5rem;
+  background-color: #eeeeee;
 }
 
 .sec-02__grid-box {
@@ -205,7 +215,7 @@ header {
   justify-content: center;
   grid-gap: 1.2rem;
   margin: auto;
-  width: 100%;
+  width: 90%;
 }
 
 @media screen and (min-width: 1025px) {
@@ -384,7 +394,6 @@ header {
     top: 7%;
     left: -1%;
   }
-
 }
 
 /* ACCOMMODATION SECTION */
@@ -406,7 +415,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 90%; 
+  width: 90%;
 }
 
 .accommodation__card {
@@ -443,7 +452,6 @@ header {
   line-height: 26px;
   color: #818181;
 }
-
 
 /* BOOKING OFFER */
 
@@ -483,19 +491,16 @@ header {
 }
 
 .booking-offer__book-now-button:hover {
-  color:#4e3b30;
+  color: #4e3b30;
   font-size: 17px;
   transition: 0.2s ease;
 }
 
-
-
 /* Gary */
 
-
 .farm-shop {
-  background-color: #eeeeee; 
-  padding: 3rem 0; 
+  background-color: #eeeeee;
+  padding: 3rem 0;
 }
 
 .farm-shop__title {
@@ -539,9 +544,8 @@ header {
   font-family: "Playfair Display", sans-serif;
   text-transform: uppercase;
   color: #3b2d25;
-  margin: 1rem 0; 
+  margin: 1rem 0;
 }
-
 
 .body__text {
   width: 100%;
@@ -645,7 +649,7 @@ footer {
   max-width: 1400px;
   margin: auto;
   width: 80%;
-  padding: 5rem 0 9rem 0;
+  padding: 5rem 0;
 }
 
 .foot span {
@@ -654,7 +658,7 @@ footer {
 
 .foot__box {
   max-width: 22%;
-  min-width: 300px;
+  min-width: 200px;
   margin: 1rem;
 }
 
