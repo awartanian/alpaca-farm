@@ -8,6 +8,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display&display=swap"
     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b78a4195e7.js" crossorigin="anonymous"></script>
   <title>The Happy Alpaca</title>
 </head>
 
@@ -22,13 +24,13 @@
       <div class="nav__link">
           <button class="link__button">menu</button>
           <div class="link__list">
-            <a href="#">about</a>
-            <a href="#">farm</a>
-            <a href="#">alpacas</a>
-            <a href="#">tours</a>
-            <a href="#">stay</a>
-            <a href="#">shop</a>
-            <a href="#">contact</a>
+            <a href="#about">about</a>
+            <a href="#farm">farm</a>
+            <a href="#alpacas">alpacas</a>
+            <a href="#tours">tours</a>
+            <a href="#stay">stay</a>
+            <a href="#shop">shop</a>
+            <a href="#contact">contact</a>
           </div>
         </div>
       </nav>
@@ -39,7 +41,7 @@
         doloremque?
       </p>
     </header>
-    <section class="sec-01">
+    <section id="about" class="sec-01">
       <h2 class="sec-01__title">about</h2>
       <p class="sec-01__text">
         The Happy Alpaca Farm is a fictive farm everyone can enjoy. Book a tour
@@ -48,55 +50,55 @@
       </p>
     </section>
   
-    <section class="sec-02">
+    <section id="farm" class="sec-02">
       <h2 class="sec-02__title">the farm</h2>
       <div class="sec-02__grid-box">
         <div class="grid-box">
           <img
             class="R-image"
-            src="./images/farm/paz-arando-ZHmvek0kJW8-unsplash.jpg"
+            src="./images/alpaco_nature.jpg"
             alt=""
           />
         </div>
         <div class="grid-box grid-box2">
           <img
             class="R-image"
-            src="./images/farm/willian-justen-de-vasconcellos-ulUnRNuC_ok-unsplash.jpg"
+            src="./images/horse.jpg"
             alt=""
           />
         </div>
         <div class="grid-box grid-box3">
           <img
             class="R-image"
-            src="./images/farm/jaddy-liu-KgYAIBzuKPo-unsplash.jpg"
+            src="./images/cow.jpg"
             alt=""
           />
         </div>
         <div class="grid-box grid-box4">
           <img
             class="R-image"
-            src="./images/farm/lesly-juarez-viwGM7jCUFA-unsplash (2).jpg"
+            src="./images/chicken.jpg"
             alt=""
           />
         </div>
         <div class="grid-box grid-box4">
           <img
             class="R-image"
-            src="./images/farm/lesly-juarez-viwGM7jCUFA-unsplash (2).jpg"
+            src="./images/bitches-kissing.jpg"
             alt=""
           />
         </div>
         <div class="grid-box grid-box4">
           <img
             class="R-image"
-            src="./images/farm/lesly-juarez-viwGM7jCUFA-unsplash (2).jpg"
+            src="./images/alpaco-wild.jpg"
             alt=""
           />
         </div>
       </div>
     </section>
   
-    <section class="sec-03">
+    <section id="alpacas" class="sec-03">
       <h2 class="sec-03__title">the alpacas</h2>
       <div class="sec-03__wrapper">
         <div class="wrapper__item">
@@ -143,7 +145,7 @@
     </section>
 
     <!-- Arty -->
-    <section class="Guided-tours__section">
+    <section id="tours" class="Guided-tours__section">
       <h2 class="Guided-tours__title">Guided Tours</h2>
       <div class="Guided-tours">
         <div class="Guided-tours__card Guided-tours__card--one">
@@ -222,7 +224,7 @@
     </section>
       
 </section>
-  <section class="accommodation__section">
+  <section id="stay" class="accommodation__section">
     <h2 class="accommodation__title">Accommodation</h2>
 
     <div class="accommodation">
@@ -263,7 +265,7 @@
 
 
     <!-- Gary -->
-    <section class="farm-shop">
+    <section id="shop" class="farm-shop">
       <h2 class="farm-shop__title">Farm Shop</h2>
       <div class="farm-shop__wrapper">
         <div class="wrapper__card">
@@ -277,7 +279,7 @@
           <div class="card__body">
             <h4 class="body__title">Coffee</h4>
             <p class="body__text">
-              L Enjoy our coffee variety of filter coffee,cold brew,capucchino
+               Enjoy our coffee variety of filter coffee,cold brew,capucchino
               and other specialties. Freshly prepared daily by trained baristas.
             </p>
           </div>
@@ -294,7 +296,7 @@
           <div class="card__body">
             <h4 class="body__title">Bread</h4>
             <p class="body__text">
-              L Our country bakery bakes daily fresh and handmade baked goods
+               Our country bakery bakes daily fresh and handmade baked goods
               from the stone oven.Let us surprise you with a wide variety of
               breads and cakes.
             </p>
@@ -311,7 +313,7 @@
           <div class="card__body">
             <h4 class="body__title">Fruits</h4>
             <p class="body__text">
-              L Fresh seasonal fruit from our orchards and surrounding farms.We
+               Fresh seasonal fruit from our orchards and surrounding farms.We
               offer everything that can be havested to the current season in the
               best organic quality you can get.
             </p>
@@ -319,21 +321,21 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="contact">
       <h2>contact us</h2>
       <div class="form__shadow">
       <form class="form" action="index.html" method="POST">
         <div>
           <label class="form__label" for="firstName">first name:</label>
-          <input type="text" id="firstName" name="firstName" placeholder="..." />
+          <input type="text" id="firstName" name="firstName" placeholder="..." required/>
         </div>
         <div>
           <label class="form__label" for="lastName">last name:</label>
-          <input type="text" name="last name" placeholder="..."  />
+          <input type="text" name="last name" placeholder="..." required />
         </div>
         <div>
           <label class="form__label" for="email">email:</label>
-          <input type="email" name="email" placeholder="..."  />
+          <input type="email" name="email" placeholder="..."  required/>
         </div>
         <div>
           <label class="form__label" for="textarea">comment:</label>
@@ -347,6 +349,53 @@
       </form>
     </div>
     </section>
+    <footer>
+      <section class="foot">
+      <div class="foot__box foot__box1">
+        <img class="box1__img" src="images/logo/alpaca.svg">
+        <span class="box1__title1">the happy</span>
+        <span class="box1__title2">alpaca</span>
+        <p class="box1__text">a farm where you and your alpaca will feel at home. beyond your dreams. within your reach.</p>
+        <div class="box1__social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-google"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+      </div>
+      <div class="foot__box foot__box2">
+        <span class="box2__title">useful links</span>
+        <div class="box2__list">
+            <a href="#about">about</a>
+            <a href="#farm">farm</a>
+            <a href="#alpacas">alpacas</a>
+            <a href="#tours">tours</a>
+            <a href="#stay">stay</a>
+            <a href="#shop">shop</a>
+            <a href="#contact">contact</a>
+          </div>
+      </div>
+      <div class="foot__box foot__box3">
+        <span class="box3__title">instagram</span>
+        <img src="./images/alpaco-wild.jpg" alt="alpaca picture">
+        <img src="./images/alpaco_nature.jpg" alt="alpaca picture">
+        <img src="./images/bitches-kissing.jpg" alt="alpaca picture">
+        <img src="./images/chicken.jpg" alt="chicken picture">
+        <img src="./images/cow.jpg" alt="cow picture">
+        <img src="./images/horse.jpg" alt="horse picture">
+      </div>
+      <div class="foot__box foot__box4">
+        <span class="box4__title">newsletter</span>
+        <form class="box4__search-wrap" action="/action_page.php">
+          <input class="box4__search-bar" type="text" placeholder="Your email.." name="search">
+          <button type="submit">send</button>
+          <p class="box4__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolore placeat alias!</p>
+        </form>
+      </div>
+    </section>
+    </footer>
   </body>
 </html>
 
