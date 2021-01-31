@@ -4,6 +4,22 @@
   padding: 0;
 }
 
+/* --- COLORS --- 
+*** Primary colors: 
+#E5AE8C Alpaca color     - all buttons, logo, nav:hover 
+#f9f9f9 Snow color       - background
+#eeeeee whitesmoke color - background
+
+*** Secondary colors: 
+#4e3b30 Dark brown for sub titles 
+#818181 light gray for some Paragraphs 
+#000000 black for main titles  
+
+FONTS: 
+Primary: "Montserrat"
+Secondary: "Playfair Display"
+*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,6 +27,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #fafafa;
+  scroll-behavior: smooth;
 }
 
 h2 {
@@ -19,125 +36,128 @@ h2 {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  margin: 3rem auto;
 }
 
 /* Ratko */
 
 /* navigation bar */
 .nav {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
+  position: relative;
+  max-width: 1400px;
+  margin: auto;
 }
 
 /* nav logo and title */
 .nav__logo {
-  display: flex;
-  align-items: center;
-  margin-left: 1rem;
+  width: 200px;
+  padding: 1.02rem;
+  background-color: #fafafacb;
 }
 
 .logo__img {
-  width: 36px;
+  width: 50px;
+  float: left;
 }
 
-.logo__title {
+.logo__title1 {
   display: block;
-  text-transform: capitalize;
-  font-weight: 600;
-  padding-left: 1rem;
-  color: rgb(59, 59, 59);
-}
-
-/* nav links */
-
-.nav__link:hover > .link__list {
-  display: block;
-  background-color: #fafafa;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  width: 100%;
-  text-align: center;
-}
-
-.nav__link:hover > .link__button {
-  color: rgb(59, 59, 59);
-}
-
-.link__button {
-  background-color: rgba(47, 47, 47, 0);
-  color: rgb(59, 59, 59);
-  border: none;
-  padding: 1.1rem;
   text-transform: uppercase;
-  font-weight: 600;
-  outline: none;
+  font-size: 1.16rem;
+  font-family: "Montserrat";
 }
 
-.link__button:hover {
-  color: rgb(51, 51, 51);
-}
-
-.link__list {
-  display: none;
-  position: absolute;
-  right: 0;
-}
-
-.link__list a {
-  /* color: rgb(230, 230, 230); */
-  color: rgb(59, 59, 59);
-  padding: 0.53rem 3rem;
-  text-decoration: none;
+.logo__title2 {
   display: block;
-  text-transform: capitalize;
+  margin-top: -0.5rem;
+  text-transform: uppercase;
+  font-size: 1.95rem;
+  color: #e5ae8c;
+  font-family: "Playfair Display";
   font-weight: 500;
-  font-size: 0.95rem;
 }
 
-/* EXPERIMENT */
-/* 
+/* navigation links */
+.nav__menu {
+  height: 90px;
+  line-height: 70px;
+  max-width: 100%;
+  min-width: 200px;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
-/* navigation after 900px screen width */
-@media screen and (min-width: 900px) {
-  .link__button {
+.menu__list {
+  text-align: center;
+  background-color: #fafafacb;
+  display: none;
+}
+
+.menu__list a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  line-height: 50px;
+  font-weight: 400;
+  text-transform: capitalize;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+  text-align: left;
+  padding-left: 4.3rem;
+  font-size: 1.1rem;
+}
+
+.menu__list a:hover {
+  color: #e5ae8c;
+}
+
+label[for="menu__toggle"] {
+  margin-right: 2rem;
+  font-size: 1.7rem;
+  line-height: 90px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#menu__toggle:checked+.menu__list {
+  display: block;
+}
+
+.ham-line {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+@media screen and (min-width: 1025px) {
+  label[for="menu__toggle"] {
     display: none;
   }
 
-  .link__list {
-    display: flex;
+  .menu__list {
+    display: inline-block;
     background-color: transparent;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    text-align: right;
   }
 
-  .nav__link:hover > .link__list {
-    display: flex;
-  }
-
-  .nav__link:hover > .link__list {
-    box-shadow: none;
-    background-color: transparent;
-  }
-
-  .link__list a:hover {
-    color: #e5ae8c;
-  }
-
-  .nav__logo {
-    padding: 0.45rem;
-  }
-
-  .link__list a {
-    padding: 1rem 1rem;
+  .menu__list a {
+    display: inline-block;
+    padding: 0 1.5rem;
+    line-height: 90px;
+    border: none;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
   }
 }
 
 /* header hero image */
 header {
-  background: url(./images/farm/alpaca-hero-image-black-white.jpg);
+  background: url(./images/alpaca-hero-image-blueSky.jpg);
   height: 100vh;
   background-attachment: fixed;
   background-position: bottom;
@@ -149,19 +169,19 @@ header {
   text-transform: capitalize;
   text-align: center;
   font-size: 5rem;
-  color: #000000;
+  color: #000000bc;
   padding-top: 3rem;
 }
 
 .hero-text {
-  width: 500px;
+  max-width: 500px;
   margin: auto;
 }
 
 /* general  rules */
-.sec-01__title,
-.sec-02__title {
-  margin: 2rem auto;
+
+#about {
+  scroll-margin-top: 2rem ;
 }
 
 .sec-01__text {
@@ -170,37 +190,41 @@ header {
   font-size: 0.8rem;
 }
 
-.sec-03__title {
-  margin: 2rem auto;
-}
-
 /* styling for all images in first 3 sections */
 
 .R-image {
   object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 100%;
-  object-position: center;
 }
 
 /* section Farm(02) grid layout */
 
+.sec-01 {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .sec-01__text {
+  margin: 1.8rem 2rem;
+  font-size: 1.1rem;
   text-align: center;
-  font-size: 1.2rem;
-  margin: 3rem auto;
-  width: 90%;
+  line-height: 2rem;
+  color: #252525;
 }
 
 .sec-02 {
   padding: 1rem 0 8rem 0;
   margin-top: 5rem;
+  background-color: #eeeeee;
 }
 
 .sec-02__grid-box {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(200px, 600px);
   grid-template-rows: repeat(1, 1fr);
+  justify-content: center;
   grid-gap: 1.2rem;
   margin: auto;
   width: 90%;
@@ -208,42 +232,35 @@ header {
 
 @media screen and (min-width: 1025px) {
   .sec-02__grid-box {
-    grid-template-columns: repeat(auto-fit, 420px);
+    grid-template-columns: repeat(auto-fit, 400px);
     grid-template-rows: repeat(auto-fit, 1fr);
     justify-content: center;
     max-width: 1400px;
   }
 }
 
-.grid-box {
-  height: 300px;
-  transition: 0.5s ease;
+/* section Alpacas(03) */
+
+#alpacas {
+  scroll-margin-top: 2rem ;
 }
 
-.grid-box:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  transition: 0.5s ease;
-  transform: scale(1.01);
-}
-
-/* section Alpacas(03) flex images */
 .sec-03 {
-  margin: 2rem auto;
+  margin: 2rem auto 4rem auto;
 }
 
 .sec-03__wrapper {
-  width: 90%;
   max-width: 1400px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 }
 
 .wrapper__item {
   width: 150px;
-  margin: 1rem;
-  transition: 0.5s ease;
+  margin: auto 1.8rem;
 }
 
 .item__img {
@@ -252,11 +269,6 @@ header {
   border-radius: 50%;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.wrapper__item:hover {
-  transform: scale(1.2);
-  transition: 0.5s ease;
 }
 
 .item__title {
@@ -276,22 +288,17 @@ header {
 
 .Guided-tours__section {
   background: rgb(104, 123, 136);
-  background: linear-gradient(180deg, rgba(78, 110, 133, 0.863) 10%, rgba(155, 202, 235, 0) 100%);
+  background: linear-gradient(180deg,
+      rgba(78, 110, 133, 0.863) 10%,
+      rgba(155, 202, 235, 0) 100%);
   width: 100%;
-  margin: 0 auto; 
-  padding-bottom: 5rem; 
-  background-image: url(./images/farm/Alpacas_black_white.jpg) ;
+  margin: 0 auto;
+  padding: 0.1rem 0 5rem 0;
+  background-image: url(./images/Guidline-background.jpg);
   background-position: bottom;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.Guided-tours__title {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 1rem 0;
-  color: rgb(36, 36, 36);
 }
 
 .Guided-tours {
@@ -310,8 +317,7 @@ header {
   border-radius: 3px;
   background: #f8f8f8;
   border: solid #bdbdbd 1px;
-  /* box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2); */
-  transition: 0.5s ease;
+  box-shadow: -2px 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .Guided-tours__card--two {
@@ -341,7 +347,7 @@ header {
   font-weight: 400;
 }
 
-.Guided-tours__text-container > * + * {
+.Guided-tours__text-container>*+* {
   margin: 2rem 0;
   line-height: 1.5rem;
   font-size: 15px;
@@ -354,14 +360,13 @@ header {
 .Guided-tours__book-now-container__button {
   display: block;
   text-decoration: none;
-  background-color: white;
-  color: #4e3b30;
+  color: white;
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
   width: 100%;
   text-align: center;
-  line-height: 3rem;
+  line-height: 2.5rem;
   text-transform: uppercase;
   margin-top: 2rem;
   background-color: #e5ae8c;
@@ -369,10 +374,12 @@ header {
 }
 
 .Guided-tours__book-now-container__button:hover {
-  color: white;
+  color: #4e3b30;
+  transition: 0.5s ease;
+  transform: scale(1.02);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .Guided-tours {
     flex-direction: row;
     padding: 0 3rem;
@@ -391,16 +398,9 @@ header {
   }
 
   .Guided-tours__card--two::before {
-    padding: 0.3rem 0.9rem;
+    padding: 0.3rem 0.6rem;
     top: 7%;
     left: -1%;
-  }
-
-  .Guided-tours__card:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: 0.5s ease;
-    transform: scale(1.08);
-    font-size: 17px;
   }
 }
 
@@ -409,14 +409,9 @@ header {
 .accommodation__section {
   background-color: #f9f9f9;
   width: 100%;
+  scroll-margin-top: 2rem;
 }
 
-.accommodation__title {
-  text-align: center;
-  margin: 5rem auto 2rem auto;
-  padding: 1rem 0;
-  background-color: #f9f9f9;
-}
 
 .accommodation {
   margin: 0 auto;
@@ -424,6 +419,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 90%;
 }
 
 .accommodation__card {
@@ -431,10 +427,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
-}
-
-.accommodation__image-container {
-  height: 250px;
+  margin: 0.7rem;
 }
 
 .accommodation__card img {
@@ -460,16 +453,10 @@ header {
   color: #818181;
 }
 
-@media only screen and (min-width: 904px) {
-  .accommodation__card--two {
-    margin: 0 2rem;
-  }
-}
-
 /* BOOKING OFFER */
 
 .booking-offer {
-  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -481,12 +468,6 @@ header {
   color: #252525;
 }
 
-@media only screen and (min-width: 904px) {
-  .booking-offer p {
-    margin: 3rem 7rem;
-  }
-}
-
 .booking-offer__book-now-container {
   text-align: center;
   width: 100%;
@@ -496,7 +477,7 @@ header {
   display: block;
   text-decoration: none;
   background-color: white;
-  color: #4e3b30;
+  color: white;
   font-weight: 700;
   letter-spacing: 1px;
   cursor: pointer;
@@ -510,20 +491,17 @@ header {
 }
 
 .booking-offer__book-now-button:hover {
-  color: white;
+  color: #4e3b30;
   font-size: 17px;
   transition: 0.2s ease;
+  transform: scale(1.02);
 }
 
 /* Gary */
 
 .farm-shop {
-  margin: 6rem auto;
-}
-
-.farm-shop__title {
-  text-align: center;
-  margin-bottom: 2rem;
+  background-color: #eeeeee;
+  padding: 0.1rem 0 3rem 0;
 }
 
 .farm-shop__wrapper {
@@ -545,7 +523,8 @@ header {
 
 .card__image {
   width: 100%;
-  height: 250px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card__body {
@@ -554,18 +533,22 @@ header {
 }
 
 .body__title {
-  font-size: 1.5rem;
+  font-size: 22px;
+  font-weight: 400;
   text-align: center;
   margin-top: 1.2rem;
   font-family: "Playfair Display", sans-serif;
-  font-weight: 400;
   text-transform: uppercase;
+  color: #3b2d25;
+  margin: 1rem 0;
 }
 
 .body__text {
-  width: 95%;
-  margin: 2rem auto;
-  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6d6c6c;
 }
 
 /* Form */
@@ -573,7 +556,7 @@ header {
 .form__shadow {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   width: 90%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 3rem auto;
   height: 100%;
   padding: 0.1rem;
@@ -616,9 +599,11 @@ input[type="submit"] {
   font-weight: 500;
   font-size: 0.9rem;
   line-height: 8px;
-  color: #3d3d3dca;
+  color: white;
   font-weight: 600;
   display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 input[type="submit"]:active {
@@ -627,10 +612,12 @@ input[type="submit"]:active {
 }
 
 input[type="submit"]:hover {
-  color: rgb(0, 0, 0);
-  transition: 0.5s ease;
-  color: white;
+  color: #4e3b30;
+  font-size: 15px;
+  transition: 0.3s ease;
+  transform: scale(1.02);
 }
+
 
 input:focus,
 .textarea:focus {
@@ -644,5 +631,189 @@ input:focus,
   color: #3d3d3de8;
   margin: 0.9rem 0 -0.5rem 0.3rem;
   display: block;
+  text-transform: capitalize;
+}
+
+
+/* ALPACA SKETCH EFFECT */
+
+#contact {
+  position: relative;
+  scroll-margin-top: 2rem;
+}
+
+#contact::before {
+  content: url(./images/alpaca-sketch-left.png);
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  transform: scale(.9);
+  left: -8%;
+  bottom: -5%;
+  opacity: 0;
+}
+
+
+#contact::after {
+  content: url(./images/alpaca-sketch-right.png);
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  transform: scale(.8);
+  right: -8%;
+  top: -7%;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 1350px) {
+
+  #contact::before {
+    opacity: 0.4;
+  }
+
+  #contact::after {
+    opacity: 0.4;
+  }
+
+}
+
+
+/* Footer */
+
+footer {
+  background-color: #292729;
+  color: #ffffff;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+  width: 80%;
+  padding: 5rem 0;
+}
+
+.foot span {
+  display: block;
+}
+
+.foot__box {
+  max-width: 22%;
+  min-width: 200px;
+  margin: 1rem;
+}
+
+.box2__title,
+.box3__title,
+.box4__title {
+  font-family: "Playfair Display";
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+
+/* Box1 */
+.box1__img {
+  width: 45px;
+  float: left;
+}
+
+.box1__title1 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: "Montserrat";
+}
+
+.box1__title2 {
+  margin-top: -0.5rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #e5ae8c;
+  font-family: "Playfair Display";
+  font-weight: 500;
+}
+
+.box1__text {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #ffffff;
+  margin: 1rem 0;
+  text-transform: capitalize;
+  width: 70%;
+}
+
+.box1__social-icons i {
+  font-size: 1.1rem;
+  margin-right: 0.6rem;
+  transition: 0.5s ease;
+}
+
+.box1__social-icons i:hover {
+  color: #e5ae8c;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+/* Box2 */
+
+.box2__list {
+  width: 20%;
+}
+
+.box2__list a {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.box2__list a:hover {
+  color: #e5ae8c;
+}
+
+/* box3 */
+
+.foot__box3 img {
+  width: 90px;
+}
+
+/* Box4 */
+.box4__search-wrap {
+  position: relative;
+}
+
+.box4__search-bar {
+  width: 70%;
+  overflow: hidden;
+  background-color: rgb(19, 19, 19);
+  font-size: 0.7rem;
+  height: 45px;
+}
+
+button[type="submit"] {
+  width: 30%;
+  height: 45px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #e5ae8c;
+  border: none;
+  outline: none;
+  border-radius: none;
+  color: #202020;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.box4__text {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #ffffff;
   text-transform: capitalize;
 }
