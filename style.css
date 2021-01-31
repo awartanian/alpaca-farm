@@ -22,12 +22,14 @@ Secondary: "Playfair Display"
 
 html {
   scroll-behavior: smooth;
+  overflow-x:hidden; 
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #fafafa;
   scroll-behavior: smooth;
+  overflow-x:hidden; 
 }
 
 h2 {
@@ -790,6 +792,7 @@ footer {
   width: 70%;
   overflow: hidden;
   background-color: rgb(19, 19, 19);
+  color: white; 
   font-size: 0.7rem;
   height: 45px;
 }
