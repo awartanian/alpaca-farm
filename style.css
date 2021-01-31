@@ -4,6 +4,22 @@
   padding: 0;
 }
 
+/* --- COLORS --- 
+*** Primary colors: 
+#E5AE8C Alpaca color     - all buttons, logo, nav:hover 
+#f9f9f9 Snow color       - background
+#eeeeee whitesmoke color - background
+
+*** Secondary colors: 
+#4e3b30 Dark brown for sub titles 
+#818181 light gray for some Paragraphs 
+#000000 black for main titles  
+
+FONTS: 
+Primary: "Montserrat"
+Secondary: "Playfair Display"
+*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -107,7 +123,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-#menu__toggle:checked + .menu__list {
+#menu__toggle:checked+.menu__list {
   display: block;
 }
 
@@ -163,19 +179,15 @@ header {
 }
 
 /* general  rules */
-.sec-01__title,
-.sec-02__title {
-  margin: 2rem auto;
+
+#about {
+  scroll-margin-top: 2rem ;
 }
 
 .sec-01__text {
   max-width: 1000px;
   font-weight: 400;
   font-size: 0.8rem;
-}
-
-.sec-03__title {
-  margin: 2rem auto;
 }
 
 /* styling for all images in first 3 sections */
@@ -228,8 +240,13 @@ header {
 }
 
 /* section Alpacas(03) */
+
+#alpacas {
+  scroll-margin-top: 2rem ;
+}
+
 .sec-03 {
-  margin: 2rem auto;
+  margin: 2rem auto 4rem auto;
 }
 
 .sec-03__wrapper {
@@ -271,26 +288,17 @@ header {
 
 .Guided-tours__section {
   background: rgb(104, 123, 136);
-  background: linear-gradient(
-    180deg,
-    rgba(78, 110, 133, 0.863) 10%,
-    rgba(155, 202, 235, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(78, 110, 133, 0.863) 10%,
+      rgba(155, 202, 235, 0) 100%);
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 5rem;
-  background-image: url(./images/farm/Alpacas_black_white.jpg);
+  padding: 0.1rem 0 5rem 0;
+  background-image: url(./images/Guidline-background.jpg);
   background-position: bottom;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.Guided-tours__title {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 1rem 0;
-  color: rgb(36, 36, 36);
 }
 
 .Guided-tours {
@@ -339,7 +347,7 @@ header {
   font-weight: 400;
 }
 
-.Guided-tours__text-container > * + * {
+.Guided-tours__text-container>*+* {
   margin: 2rem 0;
   line-height: 1.5rem;
   font-size: 15px;
@@ -361,17 +369,17 @@ header {
   line-height: 2.5rem;
   text-transform: uppercase;
   margin-top: 2rem;
-  background-color: #c39854;
+  background-color: #e5ae8c;
   border-radius: 3px;
 }
 
 .Guided-tours__book-now-container__button:hover {
   color: #4e3b30;
   transition: 0.5s ease;
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .Guided-tours {
     flex-direction: row;
     padding: 0 3rem;
@@ -401,13 +409,9 @@ header {
 .accommodation__section {
   background-color: #f9f9f9;
   width: 100%;
+  scroll-margin-top: 2rem;
 }
 
-.accommodation__title {
-  text-align: center;
-  margin: 3rem auto;
-  background-color: #f9f9f9;
-}
 
 .accommodation {
   margin: 0 auto;
@@ -424,10 +428,6 @@ header {
   flex-direction: column;
   margin-bottom: 1.5rem;
   margin: 0.7rem;
-}
-
-.accommodation__image-container {
-  height: 250px;
 }
 
 .accommodation__card img {
@@ -486,7 +486,7 @@ header {
   line-height: 2.7rem;
   text-transform: uppercase;
   margin: 3rem auto;
-  background-color: #c39854;
+  background-color: #e5ae8c;
   border-radius: 3px;
 }
 
@@ -494,18 +494,14 @@ header {
   color: #4e3b30;
   font-size: 17px;
   transition: 0.2s ease;
+  transform: scale(1.02);
 }
 
 /* Gary */
 
 .farm-shop {
   background-color: #eeeeee;
-  padding: 3rem 0;
-}
-
-.farm-shop__title {
-  text-align: center;
-  margin: 0 auto 3rem auto;
+  padding: 0.1rem 0 3rem 0;
 }
 
 .farm-shop__wrapper {
@@ -527,7 +523,7 @@ header {
 
 .card__image {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -595,7 +591,7 @@ textarea {
 
 input[type="submit"] {
   transition: 0.3s ease;
-  background-color: #c39854;
+  background-color: #e5ae8c;
   width: 60%;
   max-width: 300px;
   height: 40px;
@@ -603,9 +599,11 @@ input[type="submit"] {
   font-weight: 500;
   font-size: 0.9rem;
   line-height: 8px;
-  color: #3d3d3dca;
+  color: white;
   font-weight: 600;
   display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 input[type="submit"]:active {
@@ -614,10 +612,12 @@ input[type="submit"]:active {
 }
 
 input[type="submit"]:hover {
-  color: rgb(0, 0, 0);
-  transition: 0.5s ease;
-  color: white;
+  color: #4e3b30;
+  font-size: 15px;
+  transition: 0.3s ease;
+  transform: scale(1.02);
 }
+
 
 input:focus,
 .textarea:focus {
@@ -633,6 +633,48 @@ input:focus,
   display: block;
   text-transform: capitalize;
 }
+
+
+/* ALPACA SKETCH EFFECT */
+
+#contact {
+  position: relative;
+  scroll-margin-top: 2rem;
+}
+
+#contact::before {
+  content: url(./images/alpaca-sketch-left.png);
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  transform: scale(.9);
+  left: -8%;
+  bottom: -5%;
+  opacity: 0;
+}
+
+
+#contact::after {
+  content: url(./images/alpaca-sketch-right.png);
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  transform: scale(.8);
+  right: -8%;
+  top: -7%;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 1350px) {
+
+  #contact::before {
+    opacity: 0.4;
+  }
+
+  #contact::after {
+    opacity: 0.4;
+  }
+
+}
+
 
 /* Footer */
 
