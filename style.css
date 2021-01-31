@@ -476,24 +476,23 @@ header {
 .booking-offer__book-now-button {
   display: block;
   text-decoration: none;
-  background-color: white;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
   width: 300px;
   text-align: center;
-  line-height: 2.7rem;
+  line-height: 2.5rem;
   text-transform: uppercase;
   margin: 3rem auto;
   background-color: #e5ae8c;
   border-radius: 3px;
+  transition: 0.3s ease;
 }
 
 .booking-offer__book-now-button:hover {
   color: #4e3b30;
-  font-size: 17px;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
   transform: scale(1.02);
 }
 
