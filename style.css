@@ -361,7 +361,7 @@ header {
   display: block;
   text-decoration: none;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
   width: 100%;
@@ -371,11 +371,12 @@ header {
   margin-top: 2rem;
   background-color: #e5ae8c;
   border-radius: 3px;
+  transition: 0.3s ease;
 }
 
 .Guided-tours__book-now-container__button:hover {
   color: #4e3b30;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   transform: scale(1.02);
 }
 
