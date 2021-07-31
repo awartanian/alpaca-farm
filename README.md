@@ -1,5 +1,3 @@
-https://awartanian.github.io/alpaca-farm/
-
 
 # The Happy Alpaca
 
