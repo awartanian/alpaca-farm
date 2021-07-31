@@ -102,14 +102,3 @@ Flexbox, Grid, Bootstrap (if you like it) or none of the above.
 - as a team, try to discuss and adhere to some coding conventions for the project (e.g. SCSS or CSS, BEM, indendantion and so on)
 - work on Git branches and Pull Requests as much as possible and keep the `main` branch clean and
   always with a working version
-
-
-## Groups
-
-| Group 1 | Group 2    | Group 3 | Group 4  |
-| ------- | -------    | ------- | -------  |
-| Arty    | Anastasiia | Darko   | Brisilda |
-| Gary    | Mauricio   | Kevin   | Heydar   |
-| Ratko   | Majd       | Melanie | Rahmonjon|
-|         | Moe        |         | Nisha    |
-
