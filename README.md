@@ -6,4 +6,4 @@
 
 Group project of 2 - a static website of an imagined alpaca farm tour company.
 
-Completed on : January 2021 - 2 months after learning CSS
+Completed: January 2021 - 2 months after learning CSS
